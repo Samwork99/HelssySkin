@@ -1,0 +1,48 @@
+
+/* Cards */
+.card_eyes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    box-align:center;
+    width:80%; 
+    display:flex; 
+    justify-content:space-between;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+   }
+
+.card_lips {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    box-align:center;
+    width:80%; 
+    display:flex; 
+    justify-content:space-between;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+}
+
+.card_zonet {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    box-align:center;
+    width:80%; 
+    display:flex; 
+    justify-content:space-between;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.card-price {
+    color:blue;
+    font-weight:bold;
+   }

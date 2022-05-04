@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block main %}
+<body style="background-color:#E3BC9A">
+
+<section  class="contact_us" style="width:100%;color:white;font-weight:bold;font-style:italic;margin-left:20px;margin-right:20px;background: url('../images/background-image5.jpg') center fixed;background-size:cover;">
+    <div class="titre" >
+        <h2>Où nous trouver ?</h2>
+        <div class="adresse" style="width:23%;display:inline-block">
+            <p> HelssySkin 
+            2 rue du portail
+            77 000 MELUN
+            e-mail : helssyskin@gmail
+            Tél : 01.64.96.70.55
+        </p>
+        </div>
+    </div>
+        <div class="form-contact">
+            <h2></h2>
+            <form action="" method="post" style="width:60%">
+               <div>
+                    <input type="text" name="Nom" placeholder="Nom"style="font-style:italic;color:gray">
+                    <input type="text" name="Email" placeholder="Email"style="font-style:italic;color:gray">
+                    <input type="text" name="Sujet" placeholder="Sujet"style="font-style:italic;color:gray">
+               </div>
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="Message" style="font-style:italic;color:gray">Rédigez votre message ici</textarea><br>
+                <button type="submit" class="btn btn-message btn-lg"style="background-color: #b76d4a;
+    color:white"><a>Envoyer</a></button>
+            </form>
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -20,7 +20,7 @@ class OrdersController extends AbstractController
             'orders' => $ordersRepository->findAll(),
         ]);
     }
-
+    // Créer une nouvelle route qui va permettre 
     #[Route('/new', name: 'app_orders_new', methods: ['GET', 'POST'])]
     public function new(Request $request, OrdersRepository $ordersRepository): Response
     {

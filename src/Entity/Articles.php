@@ -3,9 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\ArticlesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ArticlesRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Articles
 {
     #[ORM\Id]
@@ -38,6 +40,21 @@ class Articles
     #[ORM\JoinColumn(nullable: false)]
     private $user;
 
+    public function __construct()
+    {
+        $this->Orders = new ArrayCollection();
+        $this->created_at = new \DateTimeImmutable();
+        $this->updated_at = null;
+    }
+
+    // pour le déclencher au moment de la mise à jour d'un produit :
+    #[ORM\PreUpdate] 
+    public function setUpdatedAtValue() 
+    {
+    // pour dater la mise à jour :
+        $this->updated_at = new \DateTimeImmutable();
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
