@@ -2,10 +2,126 @@
 
 {% block title %}Articles index{% endblock %}
 
-{% block body %}
-    <h1>Articles index</h1>
+{% block main %}
+<body style="background-color:#E3BC9A">
 
-    <table class="table">
+    <div class="intro"style="text-align:center;font-family:Lucida Sans, Verdana">
+    <p>Afin d'apporter les soins appropriés à votre peau, vous devez, tout d'abord, déterminer :<br>
+        - Quel est le type de votre peau si vous la connaissez et,<br>
+        - Quelle est la problématique de votre peau actuellement ?<br>
+        Vous trouverez ci-dessous <strong>des explications et des élèments de réponses</strong> à ces deux interrogations afin de vous aider dans vos choix : </p>
+    </div><br>
+    
+     <section>
+        <h3 style="color:gray">"QUEL EST VOTRE TYPE DE PEAU ?"</h3>
+
+    <div class="flip-card-container"> 
+            <div class="flip-card"style="width:20rem;display:flex">
+                <div class="flip-card-front" style="background-image:URL('/images/visage_normal.jpg');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
+                    <h4 style="text-shadow:1px 1px 4px black">Normale</h4>
+                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+                </div>
+                <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card-container"> 
+            <div class="flip-card"style="width:20rem;display:flex">
+                <div class="flip-card-front" style="background-image:URL('/images/peau_seche.png');background-repeat: no-repeat;background-size:140%;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
+                    <h4 style="text-shadow:1px 1px 4px black">Sèche</h4>
+                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+                </div>
+                <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="flip-card-container"> 
+            <div class="flip-card"style="width:20rem;display:flex">
+                <div class="flip-card-front" style="background-image:URL('/images/peau grasse.jpeg');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
+                    <h4 style="text-shadow:1px 1px 4px black">Grasse</h4>
+                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+                </div>
+                <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="flip-card-container"> 
+            <div class="flip-card"style="width:20rem;display:flex">
+                <div class="flip-card-front" style="background-image:URL('/images/peau_mixte.png');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
+                    <h4 style="text-shadow:1px 1px 4px black">Mixte</h4>
+                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+                </div>
+                <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    </body>
+    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
+    {# <div class="flip-card">
+        <div class="flip-card-front">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/images/peau_seche.png" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px">
+            </div>
+            <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau sèche ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
+    {# <div class="flip-card">
+        <div class="flip-card-front">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/images/peau grasse.jpeg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px">
+            </div>
+            <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau grasse ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div> #}
+    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
+    {# <div class="flip-card">
+        <div class="flip-card-front">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/images/peau_mixte.png" alt="Card image cap"            style="border-top-left-radius:25px;border-bottom-right-radius:25px">
+            </div>
+            <div class="flip-card-back">
+                    <p><span>"Qu'est-ce qu'une peau mixte ?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <h3 style="color:gray">"QUEL EST VOTRE PROBLEMATIQUE ?"</h3>
+
+    {# <div class="card">
+        <div class="card-image"></div>
+            <div class="card-text">
+                <span class="date">27/04/2022</span>
+                    <h2>Peau sèche</h2>
+                        <p>Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit.</p>
+    </div>
+
+    <div class="card-stats"></div> #}
+
+
+
+
+
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -34,14 +150,14 @@
                     <a href="{{ path('app_articles_show', {'id': article.id}) }}">show</a>
                     <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
                 </td>
-            </tr>
-        {% else %}
-            <tr>
+            </tr> #}
+        {# {% else %}
+            {# <tr>
                 <td colspan="9">no records found</td>
-            </tr>
-        {% endfor %}
+            </tr> #}
+        {# {% endfor %}
         </tbody>
-    </table>
+    </table> #} 
 
     <a href="{{ path('app_articles_new') }}">Create new</a>
 {% endblock %}

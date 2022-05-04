@@ -6,6 +6,7 @@ use App\Repository\CategoriesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Categories
 {
     #[ORM\Id]
@@ -28,6 +29,19 @@ class Categories
     #[ORM\Column(type: 'datetime_immutable', nullable: true)]
     private $updated_at;
 
+    public function __construct()
+    {
+        $this->created_at = new \DateTimeImmutable();
+        $this->updated_at = null;
+    }
+
+    // pour le déclencher au moment de la mise à jour d'un produit :
+    #[ORM\PreUpdate] 
+    public function setUpdatedAtValue() 
+    {
+    // pour dater la mise à jour :
+        $this->updated_at = new \DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;
