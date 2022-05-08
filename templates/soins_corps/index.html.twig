@@ -7,16 +7,28 @@
 <body style="background-color:#E3BC9A">
 <div class="card_hands">
 
+{% if products %}
+
+  {% for product in products %}
 <div class="card" style="width: 18rem;display:flex">
-  <img class="card-img-top" src="/images/products_img/gommage_mains.png" alt="Card image cap">
+  <img class="card-img-top" src="{{ product.url }}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Soin gommant mains</h5>
-    <h6 class="card-price">12,90€</h6>
-      <p class="card-text">Soin gommant à base de café</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    <h5 class="card-title"> {{product.title}}</h5>
+    <h6 class="card-price">{{product.price}}</h6>
+      <p class="card-text">{{product.description}}</p>
+        <a href="{{ path('app_orders_new', {id_product: product.id}) }}" class="btn btn-primary">Ajouter au panier</a>
   </div>
 </div>
-<div class="card" style="width: 18rem;display:flex">
+{% endfor %}
+
+{% else %}
+
+<p>Il n'y a pas de produits</p>
+
+{% endif %}
+
+
+{# <div class="card" style="width: 18rem;display:flex">
   <img class="card-img-top" src="/images/products_img/creme_hydratante_mains_bio.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Crème hydratante mains HSkin</h5>
@@ -115,6 +127,6 @@
         <a href="#" class="btn btn-primary">Ajouter au panier</a>
   </div>
 </div>
-</div>
+</div> #}
 
 {% endblock %}

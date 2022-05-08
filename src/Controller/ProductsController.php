@@ -21,6 +21,39 @@ class ProductsController extends AbstractController
         ]);
     }
 
+    // ----------------------------------------------------------------------------------------------
+    
+    #[Route('/soins/visage', name: 'app_soins_visage')]
+    public function soins_visage(ProductRepository $productRepository): Response
+    { 
+
+        // Récupérer tous mes produits "Visage" en BDD
+        $products = $productRepository->findBy(
+            ['type' => 'visage'],
+        );
+
+        // Second paramètre :
+        return $this->render('soins_visage/index.html.twig', [
+            'controller_name' => 'ProductsController',
+            'products' => $products,
+        ]);
+    }
+    
+    #[Route('/soins/corps', name: 'app_soins_corps')]
+    public function soins_corps(ProductRepository $productRepository)
+    {
+        // Récupérer tous mes produits "Corps" en BDD
+        $products = $productRepository->findBy(
+            ['type'=> 'corps'],
+        );
+        dd($products);
+        die("ok");
+        // Le second paramètre de la fonction render est un tableau contenant 
+        // les différentes variables que l'on souhaite transmettre au front
+    }
+
+    // -------------------------------------------------------------------------------
+
     #[Route('/new', name: 'app_products_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProductsRepository $productsRepository): Response
     {
@@ -57,7 +90,7 @@ class ProductsController extends AbstractController
             $productsRepository->add($product);
             return $this->redirectToRoute('app_products_index', [], Response::HTTP_SEE_OTHER);
         }
-
+        
         return $this->renderForm('products/edit.html.twig', [
             'product' => $product,
             'form' => $form,

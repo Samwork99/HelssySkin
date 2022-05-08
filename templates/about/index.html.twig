@@ -3,12 +3,13 @@
 {% block title %}Hello AboutController!{% endblock %}
 
 {% block main %}
-
+<link rel="stylesheet" href="{{ asset('./about.css') }}"> 
 <body style="background-color:#E3BC9A">
-<div class="example-wrapper" style="margin:0 auto">
+
+<div class="example-wrapper">
      <section>
-      <div class="philosophie" style="width:50%;text-align:center;margin-left:20px">
-        <h2 style="color:white">A propos d'HelssySkin</h2><br>
+      <div class="philosophie"style="height:40%;width:50%;text-align:center;margin-left:20px">
+        <h2 style="color:white;font-style: italic;text-align:justify">A propos d'HelssySkin</h2><br>
           <p style="color:white;font-weight:bold">Maquillage, mauvais nettoyage, produits pour la peau agressifs, la pollution de l'air, mauvais gestes, mauvaises routines, produits non adaptés à son type de peau… 
 
           Pour pouvoir suivre les tendances, notre peau est menée à rude épreuve et les désastres sur la peau sont fréquents. Le problème, c’est que la peau ne cicatrise pas sans produits adaptés à ses besoins...
@@ -16,8 +17,8 @@
           Pour éviter le point de non retour de peaux sèches, déshydratées ou à problèmes, il est nécessaire d'apprendre à traiter sa peau différemment. Il faut la chouchouter avec des produits sains et il faut trouver une manière de l'embellir sans l'abîmer. L’objectif d'HelssySkin, c’est exactement ça !</p>
       </div>
 
-      <div class="image1"style="width:40%;height:20%;box-align:center;float:right;margin-left-bottom:20px">
-        <img style="border-radius:20px;margin-left:40px;box-shadow:5px" src="/images/creme_peau.jpg" Alt="creme_soin"/>
+      <div class="image1"style="width:40%;height:20%;box-align:center;float:right">
+        <img style="border-radius:20px;margin:auto;box-shadow:5px" src="/images/creme_peau.jpg" Alt="creme_soin"/>
       </div>
     </section><br>
 

@@ -33,3 +33,10 @@
   background-color:#E3BC9A;
 }
 
+.container img {
+  height:100px;
+}
+
+.container {
+  margin:10px;
+}
