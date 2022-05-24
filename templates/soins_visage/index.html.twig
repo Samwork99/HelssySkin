@@ -1,10 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SoinsVisageController!{% endblock %}
+{% block title %}Soins Visage{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/soins_visage.css') }}">
+{% endblock %}
 
 {% block main %}
 
 <body style="background-color:#E3BC9A">
+
+{# Les produits du visage #}
 <div class="card_eyes">
 
 <div class="card" style="width: 18rem;display:flex">

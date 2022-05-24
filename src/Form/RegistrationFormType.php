@@ -4,13 +4,14 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Rollerworks\Component\PasswordStrength\Validator\Constraints\PasswordStrength;
 
 
@@ -20,6 +21,8 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email')
+            ->add('lastname')
+            ->add('firstname')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -28,7 +31,7 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('plainPassword', PasswordType::class, [
+            ->add('password', RepeatedType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'type' => PasswordType::class,
@@ -58,7 +61,7 @@ class RegistrationFormType extends AbstractType
                         // ]),
                     ]
                 ],
-                    'second options' => [
+                    'second_options' => [
                         'label' => 'Confirmez votre mot de passe'],
                     'attr' => [
                         'placeholder' => 'Merci de confirmer votre mot de passe',
@@ -66,7 +69,7 @@ class RegistrationFormType extends AbstractType
                         'invalid_message' => 'Le mot de passe et la confirmation doivent être identique.'
                     ])
 
-            ->add('firstname', )
+            // ->add('firstname','lastname','address','zip', 'city','country','phone_number')
         ;
     }
 

@@ -11,7 +11,6 @@ class SoinsVisageController extends AbstractController
     #[Route('/soins/visage', name: 'app_soins_visage')]
     public function index(): Response
     { 
-        // Récupérer tous mes produits en BDD
         
         return $this->render('soins_visage/index.html.twig', [
             'controller_name' => 'SoinsVisageController',

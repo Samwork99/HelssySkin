@@ -1,0 +1,30 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/mentions_legales.css') }}"/>
+{% endblock %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions Légales{% endblock %}
+
+{% block main %}
+<body style="background-color:#E3BC9A">
+
+<div class="container mr-5 ml-5 py-5 mt-5 justify-content-center">
+<h2>Mentions Légales</h2>
+
+    <p>Informations légales : Le site web <span>helssyskin.com</span> est édité par la société HELSSYSKIN, SASU au capital social de 5 000 euros immatriculée au registre du commerce et des sociétés de Pontoise sous le numéro 898 229 XXX.
+        <br>
+        Numéro de TVA Intracommunautaire : FR 29 89 82 29 XXX.
+        <br>
+        Siège social : 28 rue du général Leclerc, 77 000, MELUN.
+        <br>
+        E-mail : contact@helssyskin.com.
+        <br>
+        Responsable de la publication : Ibtissam HAIDANE, Fondatrice.
+        <br>
+        Hébergeur : L’hébergement du site est assuré par XXXXX dont le siège social est situé au XXXXXXXXXXXXXXXXXXXXXXXXXXX. 
+        <br>
+        Téléphone :XXXXXXXXXXXXXXX.</p>
+
+</div>
+{% endblock %}

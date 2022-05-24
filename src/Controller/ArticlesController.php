@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+// Le chemin
 use App\Entity\Articles;
 use App\Form\ArticlesType;
 use App\Repository\ArticlesRepository;
@@ -10,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+// La route & return
 #[Route('/articles')]
 class ArticlesController extends AbstractController
 {
@@ -39,6 +41,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+    // CRUD : Show - Edit - Delete
     #[Route('/{id}', name: 'app_articles_show', methods: ['GET'])]
     public function show(Articles $article): Response
     {

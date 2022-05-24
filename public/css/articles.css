@@ -1,0 +1,279 @@
+
+/* Intro */
+.intro2 {
+    width:100%;
+    margin-left:50px;
+    margin-right:50px;
+    text-align:center;
+    font-family:Lucida Sans,Verdana;
+    color:white;
+    margin-top:90px;
+    font-size:20px;
+    font-style:italic;
+    
+}
+
+/* Titres */
+h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    text-align: center;
+    color:#606060;
+    border-color:black;
+    font-size:25px medium;
+    font-weight:bold;
+}
+
+/* Flip-Cards */
+
+*main {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flip-card-container {
+    width :300px;
+    height:400px;
+    perspective: 1000px;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.flip-card {
+    position:relative;
+    height:100%;
+    transition:transform 1s;
+    transform-style:preserve-3d;
+    width:20rem;
+    display:flex;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-front2, .flip-card-front3, .flip-card-front4 > h4 {
+    text-shadow:1px 1px 4px black;
+}
+
+.flip-card-front, .flip-card-front2, .flip-card-front3, .flip-card-front4, .flip-card-back {
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:2rem;
+    border-radius:0.5rem;
+}
+
+.flip-card-front {
+    color:white ;
+    background-image:URL('/images/visage_normal.jpg');
+    border:2px solid whitesmoke;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    text-align:center;
+}
+
+.flip-card-front2 {
+    color:white ;
+    background-image:URL('/images/peau_seche.png');
+    border:2px solid whitesmoke;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    text-align:center;
+}
+
+.flip-card-front3 {
+    color:white ;
+    background-image:URL('/images/peau grasse.jpeg');
+    border:2px solid whitesmoke;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    text-align:center;
+}
+
+.flip-card-front4 {
+    color:white ;
+    background-image:URL('/images/peau_mixte.png');
+    border:2px solid whitesmoke;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    text-align:center;
+}
+
+.flip-card-back {
+    color: white;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin:1rem;
+    font-size:1rem;
+    line-height:1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.flip-card-back p span {
+    display:block;
+    font-size:1.2rem;
+    font-style:italic;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top:1,25rem;
+    text-shadow:1px 1px 5px black;  
+}
+
+.flip-card-front img {
+    width:100%;
+    height:100%;
+    border-radius:0.5rem;
+}
+
+/* Solutions-problématiques */
+
+.solutions_peau {
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left:20px;
+    font-weight: bold;
+    border-color:black;
+}
+
+.solutions_peau > p > ul > li > span {
+    font-style:italic;
+    text-decoration: underline;
+}
+
+/* Cards-articles */
+
+/* .card {
+    display:grid;
+    grid-template-columns:300px;
+    grid-template-rows:210px 210px 80px;
+    grid-template-areas:"image" "text" "stats";
+
+    font-family:roboto;
+    border-radius:18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align:center;
+
+} */
+
+/* .card-image {
+    grid-area:image;
+    background: url();
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+}
+
+.card-text {
+    grid-area:text;
+}
+
+.card-stats {
+    grid-area:stats;
+} */
+
+
+/* Responsive */
+@media only screen and (min-width: 1280px) {
+    /* For wide screens: */
+    .xLarge-1 {width: 8.33%;}
+    .xLarge-2 {width: 16.66%;}
+    .xLarge-3 {width: 25%;}
+    .xLarge-4 {width: 33.33%;}
+    .xLarge-5 {width: 41.66%;}
+    .xLarge-6 {width: 50%;}
+    .xLarge-7 {width: 58.33%;}
+    .xLarge-8 {width: 66.66%;}
+    .xLarge-9 {width: 75%;}
+    .xLarge-10 {width: 83.33%;}
+    .xLarge-11 {width: 91.66%;}
+    .xLarge-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+    /* For desktop: */
+    .large-1 {width: 8.33%;}
+    .large-2 {width: 16.66%;}
+    .large-3 {width: 25%;}
+    .large-4 {width: 33.33%;}
+    .large-5 {width: 41.66%;}
+    .large-6 {width: 50%;}
+    .large-7 {width: 58.33%;}
+    .large-8 {width: 66.66%;}
+    .large-9 {width: 75%;}
+    .large-10 {width: 83.33%;}
+    .large-11 {width: 91.66%;}
+    .large-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 520px) and (max-width: 979px) {
+    /* For tablets: */
+    .medium-1 {width: 8.33%;}
+    .medium-2 {width: 16.66%;}
+    .medium-3 {width: 25%;}
+    .medium-4 {width: 33.33%;}
+    .medium-5 {width: 41.66%;}
+    .medium-6 {width: 50%;}
+    .medium-7 {width: 58.33%;}
+    .medium-8 {width: 66.66%;}
+    .medium-9 {width: 75%;}
+    .medium-10 {width: 83.33%;}
+    .medium-11 {width: 91.66%;}
+    .medium-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+    /* For mobile: */
+    .small-1 {width: 8.33%;}
+    .small-2 {width: 16.66%;}
+    .small-3 {width: 25%;}
+    .small-4 {width: 33.33%;}
+    .small-5 {width: 41.66%;}
+    .small-6 {width: 50%;}
+    .small-7 {width: 58.33%;}
+    .small-8 {width: 66.66%;}
+    .small-9 {width: 75%;}
+    .small-10 {width: 83.33%;}
+    .small-11 {width: 91.66%;}
+    .small-12 {width: 100%;}
+}
+
+@media only screen and (max-width: 259px) {
+    /* For watch: */
+    .xSmall-1 {width: 8.33%;}
+    .xSmall-2 {width: 16.66%;}
+    .xSmall-3 {width: 25%;}
+    .xSmall-4 {width: 33.33%;}
+    .xSmall-5 {width: 41.66%;}
+    .xSmall-6 {width: 50%;}
+    .xSmall-7 {width: 58.33%;}
+    .xSmall-8 {width: 66.66%;}
+    .xSmall-9 {width: 75%;}
+    .xSmall-10 {width: 83.33%;}
+    .xSmall-11 {width: 91.66%;}
+    .xSmall-12 {width: 100%;}
+}

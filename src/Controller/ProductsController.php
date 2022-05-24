@@ -5,54 +5,57 @@ namespace App\Controller;
 use App\Entity\Products;
 use App\Form\ProductsType;
 use App\Repository\ProductsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/products')]
 class ProductsController extends AbstractController
 {
     #[Route('/', name: 'app_products_index', methods: ['GET'])]
-    public function index(ProductsRepository $productsRepository): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
+        $category = $doctrine->getRepository(Products::class)->findAll();
+        $products = $category->getCategory();
         return $this->render('products/index.html.twig', [
-            'products' => $productsRepository->findAll(),
+            'products' => $productsRepository->findBy( ['name'=>'Visage'], ['name'=>'DESC'] ),
         ]);
     }
 
-    // ----------------------------------------------------------------------------------------------
+//     // ----------------------------------------------------------------------------------------------
     
-    #[Route('/soins/visage', name: 'app_soins_visage')]
-    public function soins_visage(ProductRepository $productRepository): Response
-    { 
+//     // #[Route('/soins/visage', name: 'app_soins_visage')]
+//     // public function soins_visage(ProductRepository $productRepository): Response
+//     // { 
 
-        // Récupérer tous mes produits "Visage" en BDD
-        $products = $productRepository->findBy(
-            ['type' => 'visage'],
-        );
+//     //     // Récupérer tous mes produits "Visage" en BDD
+//     //     $products = $productRepository->findBy(
+//     //         ['type' => 'visage'],
+//     //     );
 
-        // Second paramètre :
-        return $this->render('soins_visage/index.html.twig', [
-            'controller_name' => 'ProductsController',
-            'products' => $products,
-        ]);
-    }
+//     //     // Second paramètre :
+//     //     return $this->render('soins_visage/index.html.twig', [
+//     //         'controller_name' => 'ProductsController',
+//     //         'products' => $products,
+//     //     ]);
+//     // }
     
-    #[Route('/soins/corps', name: 'app_soins_corps')]
-    public function soins_corps(ProductRepository $productRepository)
-    {
-        // Récupérer tous mes produits "Corps" en BDD
-        $products = $productRepository->findBy(
-            ['type'=> 'corps'],
-        );
-        dd($products);
-        die("ok");
-        // Le second paramètre de la fonction render est un tableau contenant 
-        // les différentes variables que l'on souhaite transmettre au front
-    }
+//     // #[Route('/soins/corps', name: 'app_soins_corps')]
+//     // public function soins_corps(ProductRepository $productRepository)
+//     // {
+//     //     // Récupérer tous mes produits "Corps" en BDD
+//     //     $products = $productRepository->findBy(
+//     //         ['type'=> 'corps'],
+//     //     );
+//     //     dd($products);
+//     //     die("ok");
+//     //     // Le second paramètre de la fonction render est un tableau contenant 
+//     //     // les différentes variables que l'on souhaite transmettre au front
+//     // }
 
-    // -------------------------------------------------------------------------------
+//     // -------------------------------------------------------------------------------
 
     #[Route('/new', name: 'app_products_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProductsRepository $productsRepository): Response

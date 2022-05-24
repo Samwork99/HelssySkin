@@ -1,111 +1,86 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles index{% endblock %}
-
+{% block title %}Conseils Beauté{% endblock %}
+    
 {% block main %}
 <body style="background-color:#E3BC9A">
 
-    <div class="intro"style="text-align:center;font-family:Lucida Sans, Verdana">
-    <p>Afin d'apporter les soins appropriés à votre peau, vous devez, tout d'abord, déterminer :<br>
-        - Quel est le type de votre peau si vous la connaissez et,<br>
-        - Quelle est la problématique de votre peau actuellement ?<br>
+    {# Intro #}
+    <div class="intro2"><br>
+        <p>Afin d'apporter les soins appropriés à votre peau, vous devez, tout d'abord, déterminer :<br>
+        --> Quel est le type de votre peau si vous la connaissez et,<br>
+        --> Quelle est la problématique de votre peau actuellement ?<br>
         Vous trouverez ci-dessous <strong>des explications et des élèments de réponses</strong> à ces deux interrogations afin de vous aider dans vos choix : </p>
     </div><br>
     
-     <section>
-        <h3 style="color:gray">"QUEL EST VOTRE TYPE DE PEAU ?"</h3>
-
+    {# Differents types de peau #}
+    <h3>"Quel est votre type de peau ?"</h3><br>
+    <section style="display:flex;justify-content:space-around">
+       
+    {# Card1: Peau Normal #}
     <div class="flip-card-container"> 
-            <div class="flip-card"style="width:20rem;display:flex">
-                <div class="flip-card-front" style="background-image:URL('/images/visage_normal.jpg');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
-                    <h4 style="text-shadow:1px 1px 4px black">Normale</h4>
-                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <h4>Normale</h4>
                 </div>
-                <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+                    <div class="flip-card-back">
+                        <p><span>"Qu'est-ce qu'une peau normale?"</span><br>
+                        Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
+    {# Card2: Peau Sèche #}
     <div class="flip-card-container"> 
-            <div class="flip-card"style="width:20rem;display:flex">
-                <div class="flip-card-front" style="background-image:URL('/images/peau_seche.png');background-repeat: no-repeat;background-size:140%;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
-                    <h4 style="text-shadow:1px 1px 4px black">Sèche</h4>
-                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+            <div class="flip-card">
+                <div class="flip-card-front2">
+                    <h4>Sèche</h4>
                 </div>
                 <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+                    <p><span>"Qu'est-ce qu'une peau sèche ?"</span><br>
+                    Si votre peau est fine, grain serré, sensible et source de tiraillements, vous avez certainement la peau sèche. Pauvre en lipides, le film hydrolipidique présent à la surface de la peau devient trop perméable. Mal protégée : la peau se déshydrate facilement.</p>
             </div>
         </div>
     </div>
-
+    {# Card3: Peau Grasse #}
      <div class="flip-card-container"> 
-            <div class="flip-card"style="width:20rem;display:flex">
-                <div class="flip-card-front" style="background-image:URL('/images/peau grasse.jpeg');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
-                    <h4 style="text-shadow:1px 1px 4px black">Grasse</h4>
-                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+            <div class="flip-card">
+                <div class="flip-card-front3">
+                    <h4>Grasse</h4>
                 </div>
                 <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+                    <p><span>"Qu'est-ce qu'une peau grasse ?"</span><br>
+                    Dû à un excès de sébum, une substance huileuse sécrétée par les glandes sébacées pour protéger l'épiderme des agressions extérieures. La peau prend alors un aspect luisant, on dit parfois qu'elle brille.</p>
             </div>
         </div>
     </div>
-
+    {# Card4: Peau Mixte #}
      <div class="flip-card-container"> 
-            <div class="flip-card"style="width:20rem;display:flex">
-                <div class="flip-card-front" style="background-image:URL('/images/peau_mixte.png');background-size:140%;background-repeat: no-repeat;border-top-left-radius:40px;border-bottom-right-radius:40px;text-align:center">
-                    <h4 style="text-shadow:1px 1px 4px black">Mixte</h4>
-                    {# <img src="/images/visage_normal.jpg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px"> #}
+            <div class="flip-card">
+                <div class="flip-card-front4">
+                    <h4>Mixte</h4>
                 </div>
                 <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau normale ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+                    <p><span>"Qu'est-ce qu'une peau mixte ?"</span><br>
+                    Si elle est sèche sur les joues et les tempes, mais plutôt grasse au niveau de la ligne médiane (front, nez, menton), vous avez vraisemblablement une peau mixte.</p>
             </div>
         </div>
     </div>
     </section>
     </body>
-    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
-    {# <div class="flip-card">
-        <div class="flip-card-front">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/peau_seche.png" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px">
-            </div>
-            <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau sèche ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
-            </div>
-        </div>
-    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
-    {# <div class="flip-card">
-        <div class="flip-card-front">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/peau grasse.jpeg" alt="Card image cap" style="border-top-left-radius:25px;border-bottom-right-radius:25px">
-            </div>
-            <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau grasse ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
-            </div>
-        </div> #}
-    {# <div class="col-lg-5 mb-4" style="display:inline"> #}
-    {# <div class="flip-card">
-        <div class="flip-card-front">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/peau_mixte.png" alt="Card image cap"            style="border-top-left-radius:25px;border-bottom-right-radius:25px">
-            </div>
-            <div class="flip-card-back">
-                    <p><span>"Qu'est-ce qu'une peau mixte ?"</span><br>
-                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
-            </div>
-        </div>
 
 
-    </section>
+    {# ----------------------------------------------------------------------------------------- #}
 
-    <h3 style="color:gray">"QUEL EST VOTRE PROBLEMATIQUE ?"</h3>
+    <h3>"Quelle est votre problématique ?"</h3><br>
+    <div class="solutions_peau"><br>
+        <p>Selon votre type de peau ainsi que votre carnation, vous pouvez rencontrer diverses problématiques liées à divers facteurs :<br>
+        <ul>
+        <li><span>Facteurs environnementaux</span> : pollution, changements climatiques, rayonnement ultraviolet</li>
+        <li>Facteurs humains : stress oxydatif, mauvaise alimentation, manque de sommeil, anxiété, nervosité </li>
+        <li><span>Facteurs médicaux</span> : prise de médicaments divers,état de santé physique, dépression </li>
+        </ul>
+        Vous trouverez dans ce guide à télécharger <strong>des explications et des élèments de réponses</strong> afin d'adapter vos routines en fonction de l'état de santé de votre peau et de ces facteurs : </p>
+    </div>
 
     {# <div class="card">
         <div class="card-image"></div>
@@ -116,10 +91,6 @@
     </div>
 
     <div class="card-stats"></div> #}
-
-
-
-
 
     {# <table class="table">
         <thead>
@@ -158,6 +129,7 @@
         {# {% endfor %}
         </tbody>
     </table> #} 
-
+{# ------------------------------------------------------------------------------------------------- #}
+    
     <a href="{{ path('app_articles_new') }}">Create new</a>
 {% endblock %}

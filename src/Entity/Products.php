@@ -40,11 +40,15 @@ class Products
     #[ORM\ManyToMany(targetEntity: Orders::class)]
     private $Orders;
 
+    #[ORM\OneToMany(mappedBy: 'product', targetEntity: OrderDetail::class)]
+    private $orderDetails;
+
     public function __construct()
     {
         $this->Orders = new ArrayCollection();
         $this->created_at = new \DateTimeImmutable();
         $this->updated_at = null;
+        $this->orderDetails = new ArrayCollection();
     }
 
     // pour le déclencher au moment de la mise à jour d'un produit :
@@ -164,6 +168,36 @@ class Products
     public function removeOrder(Orders $order): self
     {
         $this->Orders->removeElement($order);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, OrderDetail>
+     */
+    public function getOrderDetails(): Collection
+    {
+        return $this->orderDetails;
+    }
+
+    public function addOrderDetail(OrderDetail $orderDetail): self
+    {
+        if (!$this->orderDetails->contains($orderDetail)) {
+            $this->orderDetails[] = $orderDetail;
+            $orderDetail->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOrderDetail(OrderDetail $orderDetail): self
+    {
+        if ($this->orderDetails->removeElement($orderDetail)) {
+            // set the owning side to null (unless already changed)
+            if ($orderDetail->getProduct() === $this) {
+                $orderDetail->setProduct(null);
+            }
+        }
 
         return $this;
     }

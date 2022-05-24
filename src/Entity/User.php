@@ -64,10 +64,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
+    public $agreeTerms;
+
     public function __construct()
     {
         $this->orders = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->created_at = new \DateTimeImmutable();
     }
 
     public function getId(): ?int

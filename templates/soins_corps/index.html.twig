@@ -1,34 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SoinsCorpsController!{% endblock %}
+{% block title %}Soins Corps{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/soins_corps.css') }}">
+{% endblock %}
 
 {% block main %}
 
 <body style="background-color:#E3BC9A">
+
+{# Les produits du corps #}
+
 <div class="card_hands">
-
-{% if products %}
-
-  {% for product in products %}
-<div class="card" style="width: 18rem;display:flex">
-  <img class="card-img-top" src="{{ product.url }}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"> {{product.title}}</h5>
-    <h6 class="card-price">{{product.price}}</h6>
-      <p class="card-text">{{product.description}}</p>
-        <a href="{{ path('app_orders_new', {id_product: product.id}) }}" class="btn btn-primary">Ajouter au panier</a>
-  </div>
+  <div class="card" style="width: 18rem; display:flex;margin-left:10px">
+    <img class="card-img-top" src="/images/products_img/Creme_Nutrition_Intense_2.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Crème riche en hydratation</h5>
+      <h6 class="card-price">40,00€</h6>
+        <p class="card-text">Crème hydratante enrichies aux huiles essentielles de romarin et babassu</p>
+          <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    </div>
 </div>
-{% endfor %}
-
-{% else %}
-
-<p>Il n'y a pas de produits</p>
-
-{% endif %}
-
-
-{# <div class="card" style="width: 18rem;display:flex">
+<div class="card" style="width:18rem;display:flex">
   <img class="card-img-top" src="/images/products_img/creme_hydratante_mains_bio.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Crème hydratante mains HSkin</h5>
@@ -68,7 +62,6 @@
         <a href="#" class="btn btn-primary">Ajouter au panier</a>
   </div>
 </div>
-
 <div class="card" style="width: 18rem; display:flex">
   <img class="card-img-top" src="/images/products_img/gommage_maison.jpg" alt="Card image cap">
   <div class="card-body">
@@ -91,15 +84,7 @@
         <a href="#" class="btn btn-primary">Ajouter au panier</a>
   </div>
 </div>
-<div class="card" style="width: 18rem;display:flex;margin-left:10px">
-  <img class="card-img-top" src="/images/products_img/gel_fraicheur_jambes.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Gel fraicheur anti-jambes lourdes HSkin</h5>
-    <h6 class="card-price">33,50€</h6>
-      <p class="card-text">Gel-fraîcheur pour des jambes légères</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
-  </div>
-</div>
+
 <div class="card" style="width: 18rem; display:flex;margin-left:10px">
   <img class="card-img-top" src="/images/products_img/sel-depsom.jpg" alt="Card image cap">
   <div class="card-body">
@@ -116,17 +101,7 @@
     <h6 class="card-price">66,90€</h6>
       <p class="card-text">Serum-booster à base de figue de barbarie et menthe poivrée</p>
         <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    </div>
   </div>
-</div>
-<div class="card" style="width: 18rem; display:flex;margin-left:10px">
-  <img class="card-img-top" src="/images/products_img/Creme_Nutrition_Intense_2.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Crème riche en hydratation</h5>
-    <h6 class="card-price">40,00€</h6>
-      <p class="card-text">Crème hydratante enrichies aux huiles essentielles de romarin et babassu</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
-  </div>
-</div>
-</div> #}
 
 {% endblock %}
