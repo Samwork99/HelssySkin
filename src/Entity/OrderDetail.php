@@ -6,6 +6,7 @@ use App\Repository\OrderDetailRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: OrderDetailRepository::class)]
+
 class OrderDetail
 {
     #[ORM\Id]
@@ -27,6 +28,7 @@ class OrderDetail
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $total;
 
+    
     public function getId(): ?int
     {
         return $this->id;

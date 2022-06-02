@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 // Doctrine ORM 
 #[ORM\Entity(repositoryClass: ArticlesRepository::class)]
 #[ORM\HasLifecycleCallbacks]
+
 class Articles
 {
     #[ORM\Id]

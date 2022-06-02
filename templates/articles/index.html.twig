@@ -3,7 +3,6 @@
 {% block title %}Conseils Beauté{% endblock %}
     
 {% block main %}
-<body style="background-color:#E3BC9A">
 
     {# Intro #}
     <div class="intro2"><br>
@@ -14,7 +13,7 @@
     </div><br>
     
     {# Differents types de peau #}
-    <h3>"Quel est votre type de peau ?"</h3><br>
+    <h3 class="article_1">"Quel est votre type de peau ?"</h3><br>
     <section style="display:flex;justify-content:space-around">
        
     {# Card1: Peau Normal #}
@@ -22,13 +21,13 @@
         <div class="flip-card">
             <div class="flip-card-front">
                 <h4>Normale</h4>
-                </div>
-                    <div class="flip-card-back">
-                        <p><span>"Qu'est-ce qu'une peau normale?"</span><br>
-                        Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
-                    </div>
-                </div>
             </div>
+            <div class="flip-card-back">
+                <p><span>"Qu'est-ce qu'une peau normale?"</span><br>
+                    Douce, lisse, ni grasse ni sèche. Elle ne brille pas, vos pores sont lisses, votre teint est uniforme et vous ne ressentez pas d'inconfort ou de tiraillement, alors votre peau est d'un type dit "normal".</p>
+            </div>
+        </div>
+    </div>
     {# Card2: Peau Sèche #}
     <div class="flip-card-container"> 
             <div class="flip-card">
@@ -42,7 +41,7 @@
         </div>
     </div>
     {# Card3: Peau Grasse #}
-     <div class="flip-card-container"> 
+        <div class="flip-card-container"> 
             <div class="flip-card">
                 <div class="flip-card-front3">
                     <h4>Grasse</h4>
@@ -50,11 +49,11 @@
                 <div class="flip-card-back">
                     <p><span>"Qu'est-ce qu'une peau grasse ?"</span><br>
                     Dû à un excès de sébum, une substance huileuse sécrétée par les glandes sébacées pour protéger l'épiderme des agressions extérieures. La peau prend alors un aspect luisant, on dit parfois qu'elle brille.</p>
+                </div>
             </div>
         </div>
-    </div>
     {# Card4: Peau Mixte #}
-     <div class="flip-card-container"> 
+        <div class="flip-card-container"> 
             <div class="flip-card">
                 <div class="flip-card-front4">
                     <h4>Mixte</h4>
@@ -62,26 +61,26 @@
                 <div class="flip-card-back">
                     <p><span>"Qu'est-ce qu'une peau mixte ?"</span><br>
                     Si elle est sèche sur les joues et les tempes, mais plutôt grasse au niveau de la ligne médiane (front, nez, menton), vous avez vraisemblablement une peau mixte.</p>
+                </div>
             </div>
         </div>
-    </div>
     </section>
-    </body>
+</body>
 
 
     {# ----------------------------------------------------------------------------------------- #}
-
-    <h3>"Quelle est votre problématique ?"</h3><br>
+    <br>
+    <h3 class="article_2">"Quelle est votre problématique ?"</h3><br>
     <div class="solutions_peau"><br>
         <p>Selon votre type de peau ainsi que votre carnation, vous pouvez rencontrer diverses problématiques liées à divers facteurs :<br>
-        <ul>
-        <li><span>Facteurs environnementaux</span> : pollution, changements climatiques, rayonnement ultraviolet</li>
-        <li>Facteurs humains : stress oxydatif, mauvaise alimentation, manque de sommeil, anxiété, nervosité </li>
-        <li><span>Facteurs médicaux</span> : prise de médicaments divers,état de santé physique, dépression </li>
-        </ul>
-        Vous trouverez dans ce guide à télécharger <strong>des explications et des élèments de réponses</strong> afin d'adapter vos routines en fonction de l'état de santé de votre peau et de ces facteurs : </p>
+            <ul>
+                <li><span>Facteurs environnementaux</span> : pollution, changements climatiques, rayonnement ultraviolet</li>
+                <li>Facteurs humains : stress oxydatif, mauvaise alimentation, manque de sommeil, anxiété, nervosité </li>
+                <li><span>Facteurs médicaux</span> : prise de médicaments divers,état de santé physique, dépression </li>
+            </ul>
+                Vous trouverez dans ce guide à télécharger <strong>des explications et des élèments de réponses</strong> afin d'adapter vos routines en fonction de l'état de santé de votre peau et de ces facteurs : </p>
     </div>
-
+{#--------------------------------------------------------------------------------------------------------#}
     {# <div class="card">
         <div class="card-image"></div>
             <div class="card-text">
@@ -89,9 +88,7 @@
                     <h2>Peau sèche</h2>
                         <p>Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit.</p>
     </div>
-
     <div class="card-stats"></div> #}
-
     {# <table class="table">
         <thead>
             <tr>
@@ -129,7 +126,6 @@
         {# {% endfor %}
         </tbody>
     </table> #} 
+    {# <a href="{{ path('app_articles_new') }}">Create new</a> #}
 {# ------------------------------------------------------------------------------------------------- #}
-    
-    <a href="{{ path('app_articles_new') }}">Create new</a>
 {% endblock %}

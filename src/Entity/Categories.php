@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
 #[ORM\HasLifecycleCallbacks]
+
 class Categories
 {
     #[ORM\Id]
@@ -42,6 +43,8 @@ class Categories
     // pour dater la mise à jour :
         $this->updated_at = new \DateTimeImmutable();
     }
+
+    // Les getters & setters
     public function getId(): ?int
     {
         return $this->id;
@@ -106,4 +109,10 @@ class Categories
 
         return $this;
     }
+    
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 }

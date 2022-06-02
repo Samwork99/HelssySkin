@@ -3,96 +3,76 @@
 {% block title %}A propos{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 {% endblock %}
 
 {% block main %}
-<body style="background-color:#E3BC9A">
 
-{# Block1 : A propos d'helssyskin #}
-<div class="wrapper">
-     <section>
-      <div class="philosophie">
-        <h2>A propos d'HelssySkin</h2><br>
-
-          <p>Maquillage, mauvais nettoyage, produits pour la peau agressifs, la pollution de l'air, mauvais gestes, mauvaises routines, produits non adaptés à son type de peau… 
+{# Block 1 : A propos d'helssyskin #}
+<div class="wrapper_about">
+  <section id="about" class="row align-items-center p-5">
+    <div class="philosophie col-6 offset-1 border-light p-4">
+      <h2>A propos d'HelssySkin</h2><br>
+        <p>
+          Maquillage, mauvais nettoyage, produits pour la peau agressifs, la pollution de l'air, mauvais gestes, mauvaises routines, produits non adaptés à son type de peau…
 
           Pour pouvoir suivre les tendances, notre peau est menée à rude épreuve et les désastres sur la peau sont fréquents. Le problème, c’est que la peau ne cicatrise pas sans produits adaptés à ses besoins...
 
-          Pour éviter le point de non retour de peaux sèches, déshydratées ou à problèmes, il est nécessaire d'apprendre à traiter sa peau différemment. Il faut la chouchouter avec des produits sains et il faut trouver une manière de l'embellir sans l'abîmer. L’objectif d'HelssySkin, c’est exactement ça !</p>
-      </div>
-
-      {# Block2 : Image_soin_peau #}
-      <div class="image_a_propos">
-        <img src="/images/creme_peau.jpg" Alt="creme_soin"/>
-      </div>
-    </section><br>
+          Pour éviter le point de non retour de peaux sèches, déshydratées ou à problèmes, il est nécessaire d'apprendre à traiter sa peau différemment. Il faut la chouchouter avec des produits sains et il faut trouver une manière de l'embellir sans l'abîmer. L’objectif d'HelssySkin, c’est exactement ça !
+        </p>
+    </div>
+    <br>
+{# Block 2 : Image_soin_peau #}
+    <div class="image_a_propos col-4 offset-1">
+      <img src="{{ ('/images/creme_peau.jpg') }}" class="w-75" alt="creme_soin"/>
+    </div>
+  </section>
 </div>
-    {# Block3 : Nos valeurs #}
-      <section>
-        {# <div class="valeurs1"> #}
 
-          <h2>Nos valeurs</h2><br>
-
-          <div class="wrapper_valeurs">
-	          <div class="card_valeurs">
-		          <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-		        <div class="info_valeurs">
-			        <h2>ENGAGEMENT</h2>
-			          <p> Lorem Ipsum is simply dummy text from the printing and typeseting industry
-			            button Read More</p>
-
-           <div class="wrapper_valeurs2">
-	          <div class="card_valeurs">
-		          <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-		        <div class="info_valeurs">
-			        <h2>EXIGENCE DE QUALITE</h2>
-			          <p> Lorem Ipsum is simply dummy text from the printing and typeseting industry
-			            button Read More</p>
-            
-            <div class="wrapper_valeurs3">
-	            <div class="card_valeurs">
-		            <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-		          <div class="info_valeurs">
-			          <h2>TRANSPARENCE</h2>
-			            <p> Lorem Ipsum is simply dummy text from the printing and typeseting industry
-			            button Read More</p>
-
-            <div class="wrapper_valeurs4">
-	            <div class="card_valeurs">
-		            <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-		          <div class="info_valeurs">
-			          <h2>INTEGRITE</h2>
-			            <p> Lorem Ipsum is simply dummy text from the printing and typeseting industry
-			            button Read More</p>
-
-            {# <h5>ENGAGEMENT</h5>
-              <p>
-          Nous nous engageons à vous proposer des produits de qualité bio et sains adaptés à chaque type de peau. Notre objectif est de vous apporter les meilleurs soins en adéquation à vos besoins. Nous vous accompagnons pour vous aider à connaître votre type de peau également.
-            </p>
+{# Block 3 : Nos valeurs #}
+<section class="about_valeurs">
+    <h2 class="titre_valeurs">Nos valeurs</h2><br>
+      <div class="container">
+        <div class="card">
+          <div class="imgBX">
+            <img src ="{{ ('/images/qualite_about.jpg') }}">
+          </div>
+        <div class="content">
+          <h5>ENGAGEMENT</h5>
+            <p>Nous nous engageons à vous proposer des produits de qualité bio et sains adaptés à chaque type de peau. Notre objectif est de vous apporter les meilleurs soins en adéquation à vos besoins.</p>
         </div>
-      <div class="valeurs2">
-
-        <h5>EXIGENCE DE QUALITE</h5>
-          <p>
-          La qualité est au centre de nos priorités. C'est le fil conducteur de nos engagements envers vous afin de vous apporter des produits naturels et sains certifiés "bio". Toutes nos exigences sont accès sur la qualité de nos produits.
-          </p>
       </div>
-      <div class="valeurs3">
-
-        <h5>TRANSPARENCE</h5>
-          <p>
-         La traçabilité est au centre de notre gestion au quotidien. Nous nous attelons à rester proactifs tout en proposant des produits naturels en toute transparence. En effet, la transparence fait partie de notre éthique tant sur le plan professionnel qu'humain.
-          </p>
+  
+      <div class="card">
+        <div class="imgBX">
+          <img src ="{{ ('/images/qualite_about1.jpg') }}">
+        </div>
+        <div class="content">
+          <h5>EXIGENCE DE QUALITE</h5>
+            <p>La qualité est au centre de nos priorités. C'est le fil conducteur de nos engagements envers vous afin de vous apporter des produits naturels et sains certifiés "bio".</p>
+        </div>
       </div>
-      <div class="valeurs4">
 
-        <h5>INTEGRITE</h5>
-          <p>
-        La base fondamentale de notre travail respecte un cadre éthique propre à nos interactions professionnelles qu'est l'intégrité. C'est une valeur importante chez HelssySkin que nous mettons au centre de nos préoccupations ainsi que de nos priorités quotidiennement.
-          </p> #}
+      <div class="card">
+        <div class="imgBX">
+          <img src ="{{ ('/images/transparence_about.jpg') }}">
+        </div>
+        <div class="content">
+          <h5>TRANSPARENCE</h5>
+            <p>La traçabilité est au centre de notre gestion au quotidien. Nous nous attelons à rester proactifs tout en proposant des produits naturels en toute transparence. En effet, la transparence fait partie de notre éthique tant sur le plan professionnel qu'humain.</p>
+        </div>
       </div>
-    </section>
+
+      {# <div class="card">
+        <div class="imgBX">
+          <img src ="/images/engagement.png">
+        </div>
+        <div class="content">
+          <h5>INTEGRITE</h5>
+            <p>Nous nous engageons à vous proposer des produits de qualité bio et sains adaptés à chaque type de peau. Notre objectif est de vous apporter les meilleurs soins en adéquation à vos besoins. Nous vous accompagnons également pour vous aider à connaître votre type de peau.</p>
+        </div>
+      </div> #}
+    </div>
+</section>
 </div>
-</body>
 {% endblock %}

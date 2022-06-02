@@ -12,7 +12,7 @@ class FirstController extends AbstractController {
 
     public function index(): Response 
     {
-       return $this->render('first.html.twig', [
+       return $this->render('first/first.html.twig', [
         'controller_name' => 'FirstController',
        ]);
     }

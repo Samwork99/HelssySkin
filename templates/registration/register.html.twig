@@ -3,7 +3,7 @@
 {% block title %}S'inscrire{% endblock %}
 
 {% block main %}
-<body style="background-image:url(images/fleur_lotus_rose.jpg);background-size:cover">
+<body id="bg_register" style="background-image:url(images/fleur_lotus_rose.jpg);background-size:cover">
     <div class="container mt-5">
 	{% for flash_error in app.flashes('verify_email_error') %}
 		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
@@ -11,30 +11,49 @@
 
 	{# Formulaire d'inscription #}
 	{{ form_start(registrationForm) }}
-	<h2 style="color:white;font-style:italic;margin-top:100px">Formulaire d'inscription</h2>
+	<h2 class="title_register">Formulaire d'inscription</h2><br>
 	<div class="row mt-2 mr-5 ml-5">
-		<div class="col-md-6">
-			{{ form_row(registrationForm.lastname) }}
-			{{ form_row(registrationForm.address) }}
-			{{ form_row(registrationForm.city) }}
-			{# {{ form_row(registrationForm.phone_number) }} #}
+		<div class="col-md-3">
+			{{ form_row(registrationForm.lastname, {
+				'label':'Nom'
+			}) }}
+			{{ form_row(registrationForm.address, {
+				'label' : 'Adresse'
+			}) }}
+			{{ form_row(registrationForm.city, {
+				'label' : 'Ville'
+			}) }}
+			{# {{ form_row(registrationForm.phone_number, {
+				'label' : 'Votre numéro'
+			}) }} #}
 		</div>
-		<div class="col-md-6">
-			{{ form_row(registrationForm.firstname) }}
-			{{ form_row(registrationForm.zip) }}
-			{{ form_row(registrationForm.country) }}	
-			{# {{ form_row(registrationForm.agreeTerms) }} #}
+		<div class="col-md-3">
+			{{ form_row(registrationForm.firstname, {
+				'label' : 'Prénom'
+			}) }}
+			{{ form_row(registrationForm.zip, {
+				'label' : 'Code postal'
+			}) }}
+			{{ form_row(registrationForm.country, {
+				'label' : 'Pays'
+			}) }}	
+			{# {{ form_row(registrationForm.agreeTerms, {
+				'label' : 'j'accepte les conditions générales d'utilisation'
+			}) }} #}
 		</div>
 	</div>
 	<div class="row mr-5 ml-5">
-		<div class="col-md-6">
-			{{ form_row(registrationForm.email) }}
-			{{ form_row(registrationForm.password, {label: 'Password'}) }}
+		<div class="col-md-3">
+			{{ form_row(registrationForm.email, {
+				'label' : 'Votre email'
+			}) }}
+			{{ form_row(registrationForm.password, {
+				'label': 'Votre mot de passe'}) }}
+
 			<button type="submit" class="btn btn-md btn-primary mb-3">S'inscrire</button>
 		</div>	
-		<div class="col-md-6">
-			{# {{ form_widget(registrationForm) }} #}
-			{{ form_end(registrationForm) }}
+		<div class="col-md-3">
+	{{ form_end(registrationForm) }}
 	</div>
 </div>
 {% endblock %}

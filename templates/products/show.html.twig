@@ -1,16 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Products{% endblock %}
+{% block title %}Détails produit{% endblock %}
 
 {% block main %}
-    <h1>Products</h1>
 
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ asset("/images/products_img/" ~ product.image ) }}" alt="..." /></div>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
+                    <div class="fs-5 mb-5">
+                        {# <span class="text-decoration-line-through"></span> #}
+                        <span class="price">{{ (product.price / 100) | number_format(2, ',', '.') }} €</span>
+                    </div>
+                        <p class="lead">{{ product.description }}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                        <button <a href="{{ path('cart_add', { 'id' : product.id }) }}" class="btn btn-outline-primary flex-shrink-0" type="button"></a>
+                            <i class="bi-cart-fill me-1"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# <!-- Related items section-->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">Related products</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Fancy Product</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div> #}
     {# <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ product.id }}</td>
-            </tr>
+            {# </tr>
             <tr>
                 <th>Name</th>
                 <td>{{ product.name }}</td>

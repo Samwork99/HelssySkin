@@ -1,0 +1,434 @@
+/* CSS de toutes les pages du site */
+
+/*=============================== PAGE 1 : FIRST ================================== */
+/* Bg-image-hero */
+#first_img > img {
+    background-size:cover;
+    background-position-x:center;
+    width:100%;
+}
+
+/* Titre */
+#first_img > h2 {
+    position:absolute;
+    top: 350px;
+    left: 520px;
+    color:#334115;
+    font-weight:bold;
+    font-style:italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#first_img > h2 > span {
+    color: #D36E70;
+    font-size:2.5rem;
+}
+
+/*=============================== PAGE 2 : HOME ====================================== */
+/* Image background */
+#intro img {
+    background-size:cover;
+    background-position: cover;
+    width:100%; 
+}
+
+/* Carousel */
+body {
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+}
+
+#carouselExampleCaptions {
+    width: 50%;
+    margin: 0 auto;
+    position:absolute;
+    top:500px;
+    left:340px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 350px;
+    border-radius:20px;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: none;
+}
+
+/* Titre */
+h2.best_skin {
+    position:absolute;
+    top: 300px;
+    left: 250px;
+    color:#334115;
+    font-weight:bold;
+    font-family:inria serif regular;
+    font-style:italic;
+    font-size:35px;
+    text-shadow:2px 1px 3px #334115;
+}
+
+h5.carousel_title {
+    color:white;
+    font-weight:bold;
+    text-shadow:3px 2px 4px black;
+    font-family:inria serif regular;
+}
+
+p.carousel_para {
+    color:white;
+    font-weight:bold;
+    text-shadow:3px 2px 4px black;
+    font-family:inria serif regular;
+}
+
+/*=============================== PAGE 3 : ABOUT ====================================== */
+
+/*=============================== PAGE 4 : SHOP ====================================== */
+#shop_HSkin {
+    width:100%;
+}
+
+.Visage_HSkin, .Corps_HSkin {
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img.Visage_HSkin, img.Corps_HSkin {
+    display:inline;
+    justify-content:center;
+    text-align:center;  
+}
+
+img.Corps_HSkin {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.img_skin_visage, .img_skin_corps {
+    border-radius: 10px;
+}
+
+h4.visage_path, h4.corps_path {
+    text-shadow:1px 1px 4px black;
+    color:white;
+}
+/*=============================== PAGE 5 : PRODUCTS_INDEX ====================================== */
+/* Container-row */
+#container_products {
+    justify-content: center;
+    position:relative;
+    display: flex;
+    padding:0;
+}
+
+/* Cards */
+.card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:flex; 
+    justify-content:space-around;
+    box-align:center;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+    margin-top:90px;
+    width:18rem;
+   }
+
+.car-title > h5 {
+    text-align: center;
+}
+
+#visage > h3 {
+    color:gray;
+    text-align: center;
+    margin:auto;
+}
+
+.card-price {
+    color:blue;
+    font-weight:bold;
+    text-align: center;
+   }
+
+.card-text {
+    text-align:center;
+}
+
+/* buttons */
+#button_strap a.btn.btn-primary {
+    font-size:12px;
+    margin-left:5px;
+}
+
+#button_strap a.btn.btn-secondary {
+    font-size:12px;
+    margin-right: 5px;
+}
+/*=============================== PAGE 6 : CART (Panier) ====================================== */
+/* Title */
+.bg-light.p-3 > h1 {
+    margin-top: 100px;
+    margin-bottom:40px;
+    color: #606060;
+    font-style:italic;
+}
+
+#light_cart {
+    --bs-bg-opacity:none;
+}
+
+/* Tableau */
+.table {
+    margin:auto;
+    margin-bottom:200px;
+    justify-content: center;
+    text-align: center;
+    font-size:18px;
+}
+
+thead tr {
+    margin:auto;
+}
+
+.table > thead > tr > th {
+    color:#D36E70;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.text-right {
+    font-weight:bold;
+}
+
+tfoot tr td {
+    font-weight: bold;
+}
+
+td > a > i > .fa-solid .fa-cart-plus {
+    margin-right:5px;
+}
+
+/* SHOW PRODUCTS */
+span.price {
+    color:blue;
+    font-weight:bold;
+}
+
+p.lead {
+    color:black;
+}
+
+/*=============================== PAGE 7 : ARTICLES (Conseils Beauté) ====================================== */
+/* Intro */
+.intro2 {
+    width:100%;
+    margin-left:30px;
+    margin-right:50px;
+    text-align:start;
+    font-family:Lucida Sans,Verdana;
+    color:white;
+    font-size:18px;
+    font-style:italic;
+}
+
+/* Titres */
+h3.article_1, h3.article_2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    text-align: center;
+    color:#606060;
+    font-size:25px medium;
+    font-weight:bold;
+}
+
+/* Flip-Cards */
+
+*main {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flip-card-container {
+    width :300px;
+    height:400px;
+    perspective: 1000px;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.flip-card {
+    width:20rem;
+    height:100%;
+    position:relative;
+    transition:transform 1s;
+    transform-style:preserve-3d;
+    display:flex;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-front2, .flip-card-front3, .flip-card-front4 > h4 {
+    text-shadow:1px 1px 4px black;
+}
+
+.flip-card-front, .flip-card-front2, .flip-card-front3, .flip-card-front4, .flip-card-back {
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:2rem;
+    border-radius:0.5rem;
+}
+
+.flip-card-front,.flip-card-front2,.flip-card-front3,.flip-card-front4 {
+    color:white ;
+    border:2px solid whitesmoke;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    text-align:center;
+}
+
+.flip-card-front {
+    background-image:URL('/images/visage_normal.jpg');
+}
+
+.flip-card-front2 {
+    background-image:URL('/images/peau_seche.png');
+}
+
+.flip-card-front3 {
+    background-image:URL('/images/peau grasse.jpeg');
+}
+
+.flip-card-front4 {
+    background-image:URL('/images/seche1.jpg');
+}
+
+.flip-card-back {
+    color: white;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin:1rem;
+    font-size:1rem;
+    line-height:1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.flip-card-back p span {
+    display:block;
+    font-size:1.2rem;
+    font-style:italic;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top:1,25rem;
+    text-shadow:1px 1px 5px black;  
+}
+
+.flip-card-front img {
+    width:100%;
+    height:100%;
+    border-radius:0.5rem;
+}
+
+/* Solutions-problématiques */
+
+.solutions_peau {
+    color:white;
+    font-family: Lucida Sans,Verdana;
+    margin-left:20px;
+    border-color:black;
+    font-size:18px;
+    font-style:italic;
+}
+
+/* Insertion fichier.pdf */
+
+
+/*=============================== PAGE 8 : CONTACT ============================================ */
+
+/*=============================== PAGE 9 : CONDITIONS GENERALES ================================ */
+
+/* MENTIONS LEGALES */
+#mentions > h2 {
+    margin-bottom:30px;
+    color:black;
+    text-decoration: underline;
+}
+
+#mentions > p > span {
+    color:blue;
+    text-decoration: underline;
+}
+
+/* CGU_CGV */
+#title_cgucgv h2, h3, h5, p {
+    margin-top: 20px;
+    
+}
+
+#title_cgucgv > h5 {
+    color:blue;
+}
+
+/* RGPD */
+#title_rgpd > h5 {
+    color:blue;
+}
+/*=============================== PAGE 10 : LOGIN/REGISTER ================================ */
+
+/* Login */
+/* #bg_log {
+    background-image:URL('images/fleur_lotus_rose.jpg');
+    background-size:cover;
+}
+
+.mt-5 .mb-8 {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+h1.h3 .mb-3 {
+    color:white;
+    font-style:italic;
+    font-weight:bolder;
+    font-size:2rem;
+    text-shadow:1px 1px 3px black;
+} */
+
+/* Register */
+
+/* #bg_register {
+    background-image:URL('images/fleur_lotus_rose.jpg');
+    background-size:cover;
+} */
+
+h2.title_register {
+    color:white;
+    font-style:italic;
+    text-shadow:1px 1px 3px black;
+}

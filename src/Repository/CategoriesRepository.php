@@ -14,6 +14,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Categories[]    findAll()
  * @method Categories[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
+
 class CategoriesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -32,7 +33,6 @@ class CategoriesRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
-
     /**
      * @throws ORMException
      * @throws OptimisticLockException

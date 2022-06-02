@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductsRepository::class)]
 #[ORM\HasLifecycleCallbacks]
+
 class Products
 {
     #[ORM\Id]

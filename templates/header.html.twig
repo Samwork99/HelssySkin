@@ -1,70 +1,63 @@
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-{% endblock %}
+{# Navbar_header_logo #}
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom">
+    <a class="navbar-brand" href="{{ path("app_home") }}"<span style="color: #D36E70;font-weight:bold;font-size:2.5rem;font-style:italic">Helssy</span><span style="color:#606060;font-weight:bold;font-size: 2rem;font-style:italic;">Skin</span></a>
 
-<!-- Navbar_header_logo -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
-  <a class="navbar-brand" href="{{ path("app_home") }}"<span style="color: #D36E70;font-weight:bold;font-size:2.5rem;font-style:italic">Helssy</span><span style="color:#606060;font-weight:bold;font-size: 2rem;font-style:italic;">Skin</span></a>
-
-<!--Barre de navigation -->
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+{# Barre de navigation #}
+      <div class="container_header container-fluid">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
-      </button>
-    {# Onglets de la barre de navigation #}
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path("app_home") }}">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path("app_about") }}">A propos</a>
-          </li>
-          {# Menu déroulant pour cet onglet #}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{{ path("app_shop") }}" id="navbarDropdownMenuLink" role="button"
-              data-mdb-toggle="dropdown" aria-expanded="false">Boutique</a>
-              <ul class="dropdown-menu dropdown submenu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="{{ path("app_soins_visage") }}">Soins visage</a></li>
-                <li><a class="dropdown-item" href="{{ path("app_soins_corps") }}">Soins corps</a></li>
-              </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path("app_articles_index") }}">Conseils Beauté</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path("app_contact") }}">Contactez-nous</a>
-          </li>
-        </ul>
-        
-        {# Icons panier/search/se connecter/s'inscrire #}
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fa-solid fa-search"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="{{ path("app_login") }}">
-              <i class="fa-solid fa-user"></i>
-            </a>
-          </li>
-
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="{{ path("app_register") }}">
-              <i class="fa-solid fa-user-pen"></i>
-            </a>
-          </li>
-        </ul>
+        </button>
+{# Onglets de la barre de navigation #}
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path("app_home") }}">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path("app_about") }}">A propos</a>
+            </li>
+{# Menu déroulant pour cet onglet #}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">Boutique</a>
+                <ul class="dropdown-menu dropdown submenu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{{ path("app_products_index") }}">Tous les produits</a></li>
+                  <li><a class="dropdown-item" href="{{ path("app_products_visage") }}">Soins visage</a></li>
+                  <li><a class="dropdown-item" href="{{ path("app_products_corps") }}">Soins corps</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path("app_articles_index") }}">Conseils Beauté</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path("app_contact") }}">Contactez-nous</a>
+            </li>
+          </ul>
+{# Icons panier/search/se connecter/s'inscrire #}
+          <ul class="navbar-nav d-flex flex-row justify-content-end">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="{{ path("app_cart") }}">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="#!">
+                <i class="fa-solid fa-search"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="{{ path("app_login") }}">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="{{ path("app_register") }}">
+                <i class="fa-solid fa-user-pen"></i>
+              </a>
+            </li>
+          </ul>
       </div>
     </div>
   </nav>
- 
-       

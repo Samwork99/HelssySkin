@@ -15,4 +15,4 @@ class SoinsCorpsController extends AbstractController
             'controller_name' => 'SoinsCorpsController',
         ]);
     }
-}
+} 

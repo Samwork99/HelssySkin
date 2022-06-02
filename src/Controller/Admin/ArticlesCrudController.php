@@ -17,9 +17,9 @@ class ArticlesCrudController extends AbstractCrudController
     {   
         return Articles::class;
     }
-    public function createArticles(string $EntityFqcn)
+    public function createEntity(string $EntityFqcn)
     {
-        $articles = new Articles;
+        $articles = new Articles();
         $articles->setUser($this->getUser());
 
         return $articles;
@@ -39,13 +39,4 @@ class ArticlesCrudController extends AbstractCrudController
             DateTimeField::new('updated_at')->hideOnForm(),
         ];
     }
-   
-    // public function persistEntity(EntityManagerInterface $em, $entityInstance): void
-    // {
-    //     if (!$entityInstance instanceof articles) return;
-
-    //     $entityInstance->setCreated_at(new \DateTimeImmutable);
-
-    //     parent::persistEntity($em, $entityInstance);
-    // }
 }

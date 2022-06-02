@@ -7,36 +7,28 @@
 {% endblock %}
 
 {% block main %}
-<body class="contact">
-
 <section class="contact_container">
     <div class="contact_us">
     {# Block1 : Adresse société #}
         <div class="titre" >
-        <h2>Où nous trouver ?</h2>
-            <div class="adresse">
-                <p> HelssySkin<br> 
-                2 rue du portail<br>
-                77 000 MELUN<br>
-                e-mail : helssyskin@gmail<br>
-                Tél : 01.64.96.70.55
-                </p>
+            <h2>Où nous trouver ?</h2>
+                <div class="adresse">
+                    <p> HelssySkin<br>2 rue du portail 77 000 MELUN<br>e-mail : helssyskin@gmail Tél : 01.64.96.70.55<br>
+                    </p>
+                </div>
         </div>
-    </div>
-
     {# Block2 : Formulaire de contact #}
-    <div class="form-contact">
-        <h2>Nous sommes à votre écoute</h2>
-            <form action="" method="post">
-               <div>
-                    <input type="text" name="Nom" placeholder="Nom">
-                    <input type="text" name="Email" placeholder="Email">
-                    <input type="text" name="Sujet" placeholder="Sujet">
-               </div>
-                <textarea name="Message" id="area" cols="30" rows="10" placeholder="Message">Rédigez votre message ici</textarea><br>
-
-                <button type="submit" class="btn btn-message btn-lg"><a>Envoyer</a></button>
-            </form>
+        <div class="form-contact">
+            <h2>Nous sommes à votre écoute</h2><br>
+                <form action="" method="post">
+                    <div>
+                        <input type="text" name="Nom" placeholder="Nom">
+                        <input type="text" name="Email" placeholder="Email">
+                        <input type="text" name="Sujet" placeholder="Sujet">
+                    </div>
+                        <textarea name="Message" id="area" cols="30" rows="10" placeholder="Message">Rédigez votre message ici</textarea><br>
+                    <button type="submit" class="btn btn-message btn-lg"><a>Envoyer</a></button>
+                </form>
         </div>
-    </section>
+</section>
 {% endblock %}

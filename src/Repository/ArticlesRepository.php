@@ -14,6 +14,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Articles[]    findAll()
  * @method Articles[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
+
 class ArticlesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -25,6 +26,7 @@ class ArticlesRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
+    // Pour ajouter un article
     public function add(Articles $entity, bool $flush = true): void
     {
         $this->_em->persist($entity);
@@ -32,11 +34,11 @@ class ArticlesRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
-
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
+    // Pour supprimer un article
     public function remove(Articles $entity, bool $flush = true): void
     {
         $this->_em->remove($entity);
@@ -44,7 +46,7 @@ class ArticlesRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
-
+// ------------------------------------------------------------------------------------------------------
     // /**
     //  * @return Articles[] Returns an array of Articles objects
     //  */

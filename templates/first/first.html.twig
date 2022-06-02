@@ -1,21 +1,12 @@
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/first.css') }}">
-{% endblock %}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Bienvenue chez HelssySkin{% endblock %}
 
 {% block main %}
-
-<!--Background_img-->
-<section>
+{# Background_img #}
     <div id="first_img" class="bg-image vh-100 justify-content-center d-flex">
         <img src="{{ asset ('images/img_hero1.jpg') }}" alt="img_hero"/>
-
-<!--Titre-->
+{# Titre #}
           <h2>"Bienvenue chez <span>Helssy</span>Skin"</h2>
     </div>
-</section>
-
 {% endblock %}

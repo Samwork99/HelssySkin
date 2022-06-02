@@ -14,49 +14,39 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/products')]
 class ProductsController extends AbstractController
 {
+    // Route de tous les produits
     #[Route('/', name: 'app_products_index', methods: ['GET'])]
     public function index(ManagerRegistry $doctrine): Response
     {
-        $category = $doctrine->getRepository(Products::class)->findAll();
-        $products = $category->getCategory();
+        $products = $doctrine->getRepository(Products::class)->findAll();
+
+        return $this->render('products/shop.html.twig', [
+            'products' => $products
+        ]);
+    }
+    // Route vers les poduits du visage
+    #[Route('/visage', name: 'app_products_visage')]
+    public function visage(ManagerRegistry $doctrine): Response
+    {
+        $category = $doctrine->getRepository(Products::class)->findBy(['category'=> 1]);
+
         return $this->render('products/index.html.twig', [
-            'products' => $productsRepository->findBy( ['name'=>'Visage'], ['name'=>'DESC'] ),
+            'products' => $category
+        ]);
+    }
+    // Route vers les produits du corps
+    #[Route('/corps', name: 'app_products_corps')]
+    public function corps(ManagerRegistry $doctrine): Response
+    {
+        $category = $doctrine->getRepository(Products::class)->findBy(['category'=> 2]);
+
+        return $this->render('products/index.html.twig', [
+            'products' => $category
         ]);
     }
 
-//     // ----------------------------------------------------------------------------------------------
-    
-//     // #[Route('/soins/visage', name: 'app_soins_visage')]
-//     // public function soins_visage(ProductRepository $productRepository): Response
-//     // { 
 
-//     //     // Récupérer tous mes produits "Visage" en BDD
-//     //     $products = $productRepository->findBy(
-//     //         ['type' => 'visage'],
-//     //     );
-
-//     //     // Second paramètre :
-//     //     return $this->render('soins_visage/index.html.twig', [
-//     //         'controller_name' => 'ProductsController',
-//     //         'products' => $products,
-//     //     ]);
-//     // }
-    
-//     // #[Route('/soins/corps', name: 'app_soins_corps')]
-//     // public function soins_corps(ProductRepository $productRepository)
-//     // {
-//     //     // Récupérer tous mes produits "Corps" en BDD
-//     //     $products = $productRepository->findBy(
-//     //         ['type'=> 'corps'],
-//     //     );
-//     //     dd($products);
-//     //     die("ok");
-//     //     // Le second paramètre de la fonction render est un tableau contenant 
-//     //     // les différentes variables que l'on souhaite transmettre au front
-//     // }
-
-//     // -------------------------------------------------------------------------------
-
+    // Pour ajouter un nouveau produit
     #[Route('/new', name: 'app_products_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProductsRepository $productsRepository): Response
     {
@@ -75,6 +65,7 @@ class ProductsController extends AbstractController
         ]);
     }
 
+    // Pour accéder à la vue en détail du produit
     #[Route('/{id}', name: 'app_products_show', methods: ['GET'])]
     public function show(Products $product): Response
     {
@@ -83,6 +74,7 @@ class ProductsController extends AbstractController
         ]);
     }
 
+    // Pour éditer le produit
     #[Route('/{id}/edit', name: 'app_products_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Products $product, ProductsRepository $productsRepository): Response
     {
@@ -100,6 +92,7 @@ class ProductsController extends AbstractController
         ]);
     }
 
+    // Pour supprimer les produits
     #[Route('/{id}', name: 'app_products_delete', methods: ['POST'])]
     public function delete(Request $request, Products $product, ProductsRepository $productsRepository): Response
     {

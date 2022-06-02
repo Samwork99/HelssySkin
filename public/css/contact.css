@@ -1,8 +1,8 @@
 /* Block1 */
-.contact {
+.contact_container {
     background-image: url('../images/background-image5.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color:#E3BC9A;
@@ -16,7 +16,7 @@
 
 .contact_us {
     margin-top: 90px;
-	width: 50%;
+	width: 100%;
     color:white;
     font-weight:bold;
     font-style:italic;
@@ -26,20 +26,32 @@
 
 .adresse > p {
     text-align: center;
-    font-size:20px;
+    font-size: 25px;
     color:white;
     font-weight:bold;
 }
 
 .adresse {
-    width:23%;
-    display:inline-block;
+    width:30%;
+    display:flex;
+
 }
 
 .titre > h2 {
     margin-left:20px;
     text-align: center;
+    display:flex;
+    font-size: 30px;
+    color:whitesmoke;
 
+}
+
+.titre {
+    margin-left:50px;
+    justify-content:center;
+    display: flex;
+    flex-direction: row;
+    width:50%;
 }
 
 /* Block2 */
@@ -48,15 +60,21 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    width:60%;
+    width: 80%;
+}
+
+.form-contact > h2 {
+    font-size: 30px;
+    color:whitesmoke;
 }
 
 form {
     padding: 0;
+    margin-left:300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 70%;
     box-align: center;
     
 }
@@ -68,7 +86,7 @@ form > div {
 }
 
 form > div > input {
-    width: 50%;
+    width: 60%;
     border-radius: 5px;
     height: 50px;
     padding: 5px 5px 5px 5px;
@@ -82,26 +100,28 @@ form > div > input {
 }
 
 #area {
-    width: 50%;
+    width: 60%;
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     font-size: 15px;
     font-style:italic;
     color:gray;
-   
 }
 
+/* Button */
 button.btn.btn-message.btn-lg {
     width: 20%;
     align-self: center;
     height: 45px;
     background-color: #b76d4a;
     color:white;
-    box-align:center;
+    /* box-align:center; */
+    text-align: center;
+    padding:0;
 }
 
-button.btn.btn-message.btn-lg :hover {
+button.btn.btn-message.btn-lg:hover {
     background-color:rgb(69, 69, 237);
 }
 
@@ -148,86 +168,5 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color:rgb(69, 69, 237);
-}
-
-/* Responsive */
-@media only screen and (min-width: 1280px) {
-    /* For wide screens: */
-    .xLarge-1 {width: 8.33%;}
-    .xLarge-2 {width: 16.66%;}
-    .xLarge-3 {width: 25%;}
-    .xLarge-4 {width: 33.33%;}
-    .xLarge-5 {width: 41.66%;}
-    .xLarge-6 {width: 50%;}
-    .xLarge-7 {width: 58.33%;}
-    .xLarge-8 {width: 66.66%;}
-    .xLarge-9 {width: 75%;}
-    .xLarge-10 {width: 83.33%;}
-    .xLarge-11 {width: 91.66%;}
-    .xLarge-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
-    /* For desktop: */
-    .large-1 {width: 8.33%;}
-    .large-2 {width: 16.66%;}
-    .large-3 {width: 25%;}
-    .large-4 {width: 33.33%;}
-    .large-5 {width: 41.66%;}
-    .large-6 {width: 50%;}
-    .large-7 {width: 58.33%;}
-    .large-8 {width: 66.66%;}
-    .large-9 {width: 75%;}
-    .large-10 {width: 83.33%;}
-    .large-11 {width: 91.66%;}
-    .large-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 520px) and (max-width: 979px) {
-    /* For tablets: */
-    .medium-1 {width: 8.33%;}
-    .medium-2 {width: 16.66%;}
-    .medium-3 {width: 25%;}
-    .medium-4 {width: 33.33%;}
-    .medium-5 {width: 41.66%;}
-    .medium-6 {width: 50%;}
-    .medium-7 {width: 58.33%;}
-    .medium-8 {width: 66.66%;}
-    .medium-9 {width: 75%;}
-    .medium-10 {width: 83.33%;}
-    .medium-11 {width: 91.66%;}
-    .medium-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 260px) and (max-width: 519px) {
-    /* For mobile: */
-    .small-1 {width: 8.33%;}
-    .small-2 {width: 16.66%;}
-    .small-3 {width: 25%;}
-    .small-4 {width: 33.33%;}
-    .small-5 {width: 41.66%;}
-    .small-6 {width: 50%;}
-    .small-7 {width: 58.33%;}
-    .small-8 {width: 66.66%;}
-    .small-9 {width: 75%;}
-    .small-10 {width: 83.33%;}
-    .small-11 {width: 91.66%;}
-    .small-12 {width: 100%;}
-}
-
-@media only screen and (max-width: 259px) {
-    /* For watch: */
-    .xSmall-1 {width: 8.33%;}
-    .xSmall-2 {width: 16.66%;}
-    .xSmall-3 {width: 25%;}
-    .xSmall-4 {width: 33.33%;}
-    .xSmall-5 {width: 41.66%;}
-    .xSmall-6 {width: 50%;}
-    .xSmall-7 {width: 58.33%;}
-    .xSmall-8 {width: 66.66%;}
-    .xSmall-9 {width: 75%;}
-    .xSmall-10 {width: 83.33%;}
-    .xSmall-11 {width: 91.66%;}
-    .xSmall-12 {width: 100%;}
 }
 

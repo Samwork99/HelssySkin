@@ -1,0 +1,230 @@
+
+body {
+    background-color:#E3BC9A;
+}
+
+main {
+    padding-top: 85.97px;
+}
+
+/*section {
+
+}
+
+h1 {
+
+}
+
+h2, h3, h4, h5 {
+
+} */
+/* =====================================HEADER========================================================= */
+
+/* HEADER */
+
+/*BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/*AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+/* NavBar-header-logo */
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+  margin-left:20px;
+}
+
+/* Logo */
+/* span {
+  color: #D36E70;
+  font-weight:bold;
+  font-size:2.5rem;
+  font-style:italic;
+} */
+
+/* span {
+  color:#606060;
+  font-weight:bold;
+  font-size: 2rem;
+  font-style:italic;
+} */
+
+
+/* Div container */ 
+.container_header {
+  margin-left:35px;
+}
+
+/* Texte barre navigation */
+#navbarSupportedContent .nav-link {
+  color:#606060;
+  font-weight:bold;
+  font-size:large;
+  border-color:black;
+  border:10px;
+}
+
+#navbarSupportedContent .nav-link:hover {
+  color:white;
+}
+
+.dropdown-item {
+  color:#606060;
+  font-weight:bold;
+}
+
+.dropdown-item:hover {
+  color:white;
+}
+
+.nav-link.dropdown-toggle {
+  color:#606060;
+  font-weight:bold;
+}
+
+.nav-link.dropdown-toggle:hover {
+  color:white;
+}
+
+/* Bg onglets barre de nav */
+
+a.nav-link:hover {
+  background-color:#C27D4B;
+  color:white;
+}
+
+a#navbarDropdownMenuLink.nav-link.dropdown-toggle:hover {
+  background-color: #C27D4B;
+  color:white;
+}
+
+a.dropdown-item:hover {
+  background-color: #C27D4B;
+  color:white;
+}
+
+
+/* ======================================FOOTER======================================================== */
+
+h6.text-uppercase.fw-bold.mb-4 {
+    color: #d36e70;
+  }
+  
+  .text-center .p-2 {
+    font-style:italic;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .col-md-2 .col-lg-2 .col-xl-2 .mx-auto .mb-2 {
+    justify-content: space-around;
+    align-items: center;
+    font-weight:bold;
+  }
+  
+  a.text-reset {
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+  }
+
+
+/* ==========================================RESPONSIVE================================================= */
+@media only screen and (min-width: 1280px) {
+    /* For wide screens: */
+    .xLarge-1 {width: 8.33%;}
+    .xLarge-2 {width: 16.66%;}
+    .xLarge-3 {width: 25%;}
+    .xLarge-4 {width: 33.33%;}
+    .xLarge-5 {width: 41.66%;}
+    .xLarge-6 {width: 50%;}
+    .xLarge-7 {width: 58.33%;}
+    .xLarge-8 {width: 66.66%;}
+    .xLarge-9 {width: 75%;}
+    .xLarge-10 {width: 83.33%;}
+    .xLarge-11 {width: 91.66%;}
+    .xLarge-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+    /* For desktop: */
+    .large-1 {width: 8.33%;}
+    .large-2 {width: 16.66%;}
+    .large-3 {width: 25%;}
+    .large-4 {width: 33.33%;}
+    .large-5 {width: 41.66%;}
+    .large-6 {width: 50%;}
+    .large-7 {width: 58.33%;}
+    .large-8 {width: 66.66%;}
+    .large-9 {width: 75%;}
+    .large-10 {width: 83.33%;}
+    .large-11 {width: 91.66%;}
+    .large-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 520px) and (max-width: 979px) {
+    /* For tablets: */
+    .medium-1 {width: 8.33%;}
+    .medium-2 {width: 16.66%;}
+    .medium-3 {width: 25%;}
+    .medium-4 {width: 33.33%;}
+    .medium-5 {width: 41.66%;}
+    .medium-6 {width: 50%;}
+    .medium-7 {width: 58.33%;}
+    .medium-8 {width: 66.66%;}
+    .medium-9 {width: 75%;}
+    .medium-10 {width: 83.33%;}
+    .medium-11 {width: 91.66%;}
+    .medium-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+    /* For mobile: */
+    .small-1 {width: 8.33%;}
+    .small-2 {width: 16.66%;}
+    .small-3 {width: 25%;}
+    .small-4 {width: 33.33%;}
+    .small-5 {width: 41.66%;}
+    .small-6 {width: 50%;}
+    .small-7 {width: 58.33%;}
+    .small-8 {width: 66.66%;}
+    .small-9 {width: 75%;}
+    .small-10 {width: 83.33%;}
+    .small-11 {width: 91.66%;}
+    .small-12 {width: 100%;}
+}
+
+@media only screen and (max-width: 259px) {
+    /* For watch: */
+    .xSmall-1 {width: 8.33%;}
+    .xSmall-2 {width: 16.66%;}
+    .xSmall-3 {width: 25%;}
+    .xSmall-4 {width: 33.33%;}
+    .xSmall-5 {width: 41.66%;}
+    .xSmall-6 {width: 50%;}
+    .xSmall-7 {width: 58.33%;}
+    .xSmall-8 {width: 66.66%;}
+    .xSmall-9 {width: 75%;}
+    .xSmall-10 {width: 83.33%;}
+    .xSmall-11 {width: 91.66%;}
+    .xSmall-12 {width: 100%;}
+}
